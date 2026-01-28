@@ -4,6 +4,7 @@ import { DatabaseModule } from './database/database.module';
 import { KafkaModule } from './kafka/kafka.module';
 import { MetricsModule } from './metrics/metrics.module';
 import { IdempotencyModule } from './idempotency/idempotency.module';
+import { ProducerConfigModule } from './producer-config/producer-config.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -17,6 +18,7 @@ import configuration from './config/configuration';
     IdempotencyModule,
     MetricsModule,
     KafkaModule,
+    ProducerConfigModule,
   ],
 })
 export class AppModule {}

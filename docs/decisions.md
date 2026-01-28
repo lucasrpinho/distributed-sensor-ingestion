@@ -19,8 +19,15 @@
 - Consumes events from Kafka
 - Processes events idempotently
 - Stores processed metrics in a partitioned data store
+- Exposes read-only HTTP endpoints for querying metrics and summary statistics
 
-### 4. Infrastructure (Terraform)
+### 4. Dashboard UI (Next.js)
+- Next.js + React + TypeScript single-page dashboard
+- Read-only view of system behaviour (no direct writes to Kafka or Postgres)
+- Provides time and sensor-based filtering over metrics
+- Offers a simple form to view and update producer configuration values stored on the backend
+
+### 5. Infrastructure (Terraform)
 - Defines Kafka, services, and networking
 - Cloud provider configuration (AWS or Azure)
 - Used for learning and signaling IaC proficiency
